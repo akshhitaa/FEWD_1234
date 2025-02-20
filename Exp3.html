@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #eef2f3;
+            text-align: center;
+            padding: 20px;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 350px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, select, button {
+            width: calc(100% - 12px);
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            display: block;
+        }
+        button {
+            background-color: #008cba;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005f73;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Customer Feedback</h2>
+        <form action="#" method="post">
+            <label for="fullName">Name (Optional):</label>
+            <input type="text" id="fullName" name="fullName">
+
+            <label for="userEmail">Email (Optional):</label>
+            <input type="email" id="userEmail" name="userEmail">
+
+            <label for="contactNumber">Phone (Optional):</label>
+            <input type="tel" id="contactNumber" name="contactNumber">
+
+            <label for="userRating">Rating:</label>
+            <select id="userRating" name="userRating" required>
+                <option value="">Select</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="productQuery">Questions about product/service:</label>
+            <textarea id="productQuery" name="productQuery" rows="4" required></textarea>
+
+            <label for="extraComments">Additional Feedback (Optional):</label>
+            <textarea id="extraComments" name="extraComments" rows="4"></textarea>
+
+            <button type="submit">Send Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
